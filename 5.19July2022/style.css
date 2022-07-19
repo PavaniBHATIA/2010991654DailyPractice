@@ -1,0 +1,18 @@
+body{
+    /* background:url('image4.jpg'); */
+    background:linear-gradient(to bottom,rgb(204,229,255),rgba(204,229,255,0.4));
+    /* background-repeat:repeat-x; */
+    font-size:1.15em;
+    text-align:justify;
+    
+}
+#myTitle{
+background-color:azure;
+color:red;
+}
+.h1Ele{
+    color:coral
+}
+h1{
+    color:blue;
+}
