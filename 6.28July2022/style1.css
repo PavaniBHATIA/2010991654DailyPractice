@@ -1,0 +1,17 @@
+body{
+    background:linear-gradient(to bottom, honeydew,deeppink);
+    font-size:1.15em;
+    text-align:justify;
+    font-family:"Lato",Sans-serif;
+}
+#title{
+    color:deeppink;
+    font-family:"Serabun",sans-serif;
+}
+#service-image{
+    height:400px;
+    width:70vw;
+    background:radial-gradient(circle,lavender 20%,plum 50%,lavender 55%);
+    border:10px solid beige;
+
+}

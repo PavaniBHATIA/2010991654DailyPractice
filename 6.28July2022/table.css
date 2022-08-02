@@ -1,0 +1,10 @@
+table,td,th{
+    border:2px solid hotpink;
+    padding:1%;
+    text-align:center;
+    border-spacing:20px;
+}
+table{
+    margin-top:20px;
+    width:100%;
+}
