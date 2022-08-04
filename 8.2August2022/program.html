@@ -7,6 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    
+    N1<input type="text" name="n1" id="n1"><br><br>
+    N2<input type="text" name="n1" id="n2"><br><br>
+    <button onclick="fnClick()">Click</button>
+    <p id="p1"></p>
+    <script>
+    function fnclick(){
+
+        let a = document.getElementById('n1').value; // no. of balls
+        let b = document.getElementById('n2').value; //no.of team members
+        
+        if(a<=b){
+           
+            var jkhk = parseInt(a/b);
+        var rem = a%b;
+        
+        
+        document.getElementById('p1').innerHTML= "Each member will get " + jkhk + " balls and the remaining balls are " + rem;
+            
+        }
+        else{
+             document.getElementById('p1').innerHTML="not possible as balls are less";
+        
+        }
+        
+        
+        
+        }
+</script>
 </body>
 </html>
