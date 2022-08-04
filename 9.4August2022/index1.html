@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:lavenderblush;
+        }
+        #l{
+            background-color:hotpink;
+            border:0px;
+            color:darkred
+        }
+        #r,#b1{
+            background-color:lightpink;
+            border:0px;
+            color:darkred
+        }
+        #k{
+            background-color:hotpink;
+            border:0px;
+            color:darkred
+        }
+        #p1{
+            color:darkslateblue
+        }
+        h2{
+            color:maroon;
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Program to Count the numbers divisible by a given number</h2>
+    L<input type="text" id="l"><br>
+    R<input type="text" id="r"><br>
+    K<input type="text" id="k"><br>
+    <p id="p1"></p>
+
+    <button type="button" id="b1"onClick="myfnc()">Click</button>
+
+    <script>
+        function myfnc(){
+        var n1=document.getElementById("l").value;
+        var n2=document.getElementById("r").value;
+        var n3=document.getElementById("k").value;
+        var count=0;
+        for(var i=n1;i<=n2;i++){
+            if(i%n3==0){
+                count=count+1;
+            }
+        }
+        document.getElementById("p1").innerText=count;
+    }
+    </script>
+</body>
+</html>
