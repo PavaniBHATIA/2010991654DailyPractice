@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter any 5 digit no. <input type="text" id="in1"><br>
+    <button type="button" onclick="myfnc()">Click</button>
+    <p id="p1"></p>
+
+    <script>
+        function myfnc(){
+            var n1=document.getElementById("in1").value;
+            var sum=0;
+            var lDigit=0;
+            while(n1!=0){
+                lDigit=n1%10;
+                sum=sum+lDigit;
+                n1=n1/10;
+                n1--;
+            }
+            document.getElementById("p1").innerText=sum;
+
+        }
+
+    </script>
+
+</body>
+</html>
