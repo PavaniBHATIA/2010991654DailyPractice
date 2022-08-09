@@ -7,21 +7,31 @@
     <title>Document</title>
     <style>
         body{
-            background-color:lavenderblush;
-            }
+            /* margin:0px; */
+            padding:0px;
+            background-color: lavenderblush;
+        }
+        #back{
+            height:600px;
+            width:600px;
+            padding-left:40px;
+            background-color:pink;
+            position:relative;
+            left:400px;
+        }
         h1{
             text-align:center;
-            color:crimson;
+            color:crimson
         }
         input{
-            position:relative;
-            left:670px;
+            position:absolute;
+            left:250px;
             height:40px;
             border:5px double hotpink
         }
         button{
-            position:relative;
-            left:670px;
+            position:absolute;
+            left:250px;
             height:40px;
             width:100px;
             background-color:hotpink;
@@ -32,26 +42,22 @@
             box-shadow: 4px 4px 8px grey;
         }
         #p1,#sq{
-            position:relative;
-            left:670px;
-
-
-        }
-        #sq{
-            padding:50px;
-            margin:10px;
+            position:absolute;
+            left:250px;
         }
         #image1{
             position:relative;
-            height:90px;
+            height:60px;
             width:190px;
         }
         #image2{
             position:relative;
-            height:90px;
-            width:160px;
+            height:60px;
+            width:120px;
         }
+        
     </style>
+
 </head>
 <body>
     <img src="image1.png" id="image1">
@@ -62,28 +68,30 @@
     <img src="image1.png" id="image1">
     <img src="image1.png" id="image1">
     <img src="image1.png" id="image2">
+    <div id="back">
+        <h1>Enter a no.</h1><input type="text" id="in1"><br><br><br><br>
+        <button type="button" onclick="myfnc()">Click</button><br><br>
+        <p id="p1"></p><br><br>
 
-    <h1>Enter any 5 digit no.</h1> <input type="text" id="in1"><br><br>
-    <button type="button" onclick="myfnc()">Click</button>
-    <p id="p1"></p>
-
-    <div id="sq"></div><br><br>
+        <div id="sq"></div><br><br><br><br><br>
     <button type="button" onclick="myfnc1()">Click to make a circle</button><br>
+    </div>
+
     <script>
         function myfnc(){
             var n1=document.getElementById("in1").value;
             var sum=0;
-            var lDigit=0;
             var count=0;
+            var lDigit=0;
             while(n1!=0){
                 lDigit=n1%10;
-                sum=sum+lDigit;
-                n1=Math.floor(n1/10);
+                sum=Math.floor(sum+lDigit);
+                n1=n1/10;
                 count++;
                 
             }
             if(count>5 || count<5){
-                alert("Please enter only 5 numbers.");
+                alert("Please enter only 5 numbers.")
             }
             else{
                     var radius=(Math.floor(sum/5));
@@ -100,22 +108,19 @@
             var n1=document.getElementById("in1").value;
             var sum=0;
             var lDigit=0;
-            var count=0;
             while(n1!=0){
                 lDigit=n1%10;
                 sum=Math.floor(sum+lDigit);
                 n1=n1/10;
-                count++;
                 
             }
-           
-                    var radius=(Math.floor(sum/5));
-                
-            document.getElementById("sq").style.borderRadius=radius+"px";
+            document.getElementById("sq").style.borderRadius=Math.floor(sum/2)+"px";
             document.getElementById("sq").style.transition="all 2s";
+
+            document.getElementById("back").style.borderRadius="300px";
+            document.getElementById("back").style.transition="all 2s";
         }
 
     </script>
-
 </body>
 </html>
